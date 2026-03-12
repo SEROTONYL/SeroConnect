@@ -31,7 +31,7 @@ export default function ContactsPage() {
         <div className="card-grid">
           <article className="card">
             <span className="label">Email поддержки</span>
-            <h3>{contactDetails.email}</h3>
+            <h3 className="copyable-text">{contactDetails.email}</h3>
             <p>Основной канал для обращений по подключению, оплате и общим вопросам.</p>
             <a className="button button-secondary" href={`mailto:${contactDetails.email}`}>
               Написать на email
@@ -40,7 +40,7 @@ export default function ContactsPage() {
 
           <article className="card">
             <span className="label">Telegram поддержки</span>
-            <h3>{contactDetails.telegram}</h3>
+            <h3 className="copyable-text">{contactDetails.telegram}</h3>
             <p>Удобный способ быстро уточнить порядок подключения и задать короткий вопрос.</p>
             <a
               className="button button-secondary"

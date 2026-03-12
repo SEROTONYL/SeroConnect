@@ -27,7 +27,7 @@ export function LegalPage({
       <Container className="document-container">
         <div className="document-layout">
           <main className="document-main">
-            <article className="document-surface">
+            <article className="document-surface copyable-content">
               <div className="page-intro document-intro">
                 <span className="eyebrow">Документы</span>
                 <h1>{title}</h1>
@@ -46,13 +46,13 @@ export function LegalPage({
           </main>
 
           <aside className="document-aside">
-            <div className="panel document-panel">
+            <div className="panel document-panel copyable-content">
               <span className="label">Кратко</span>
               <h3>{asideTitle}</h3>
               <p>{asideText}</p>
             </div>
 
-            <div className="panel document-panel">
+            <div className="panel document-panel copyable-content">
               <span className="label">Важно</span>
               <p>
                 Сведения в документе должны сопоставляться с актуальными реквизитами,

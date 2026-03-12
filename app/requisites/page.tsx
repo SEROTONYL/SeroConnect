@@ -9,8 +9,8 @@ export const metadata: Metadata = {
 };
 
 const sellerDetails = [
-  { label: "ФИО / наименование", value: "Индивидуальный предприниматель Емельянцев" },
-  { label: "Статус", value: "Физическое лицо" },
+  { label: "ФИО / наименование", value: "Яворский Владислав Эдуардович" },
+  { label: "Статус", value: "Самозанятый" },
   { label: "ИНН", value: "246009308659" },
 ];
 
@@ -26,7 +26,7 @@ export default function RequisitesPage() {
       <Container className="document-container">
         <div className="document-layout document-layout-single">
           <main className="document-main">
-            <article className="document-surface">
+            <article className="document-surface copyable-content">
               <div className="page-intro document-intro">
                 <span className="eyebrow">Реквизиты</span>
                 <h1>Реквизиты продавца и данные для связи</h1>

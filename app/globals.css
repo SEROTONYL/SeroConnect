@@ -101,6 +101,85 @@ select {
   font: inherit;
 }
 
+/* Presentation text should behave like UI chrome, not document copy. */
+:where(
+  .hero-shell,
+  .page-intro:not(.document-intro),
+  .section-heading,
+  .metric,
+  .card,
+  .panel,
+  .legal-section,
+  .cta-panel,
+  .plan-meta-item,
+  .contact-card,
+  .site-footer,
+  .faq-preview-footer,
+  .document-surface:not(.copyable-content),
+  .document-panel:not(.copyable-content)
+)
+  :where(h1, h2, h3, h4, h5, h6, p, li, dt, dd) {
+  user-select: none;
+  cursor: default;
+}
+
+:where(
+  .eyebrow,
+  .label,
+  .lead,
+  .section-copy,
+  .footer-note,
+  .footer-title,
+  .plan-meta-label,
+  .price,
+  .price span,
+  .metric strong,
+  .details-term
+) {
+  user-select: none;
+  cursor: default;
+}
+
+:where(
+  .hero-shell,
+  .page-intro,
+  .section-heading,
+  .metric,
+  .card,
+  .panel,
+  .legal-section,
+  .cta-panel,
+  .plan-meta-item,
+  .contact-card,
+  .site-footer,
+  .faq-preview-footer,
+  .document-surface,
+  .document-panel
+)
+  :where(a, button, input, textarea, select, summary, [role="button"], [role="tab"]) {
+  user-select: auto;
+}
+
+/* Explicitly opt back into selection for legal/copyable content. */
+.copyable-content :where(h1, h2, h3, h4, h5, h6, p, li, dt, dd),
+.copyable-content :where(
+    .eyebrow,
+    .label,
+    .lead,
+    .section-copy,
+    .footer-note,
+    .footer-title,
+    .plan-meta-label,
+    .price,
+    .price span,
+    .metric strong,
+    .details-term
+  ),
+.copyable-text {
+  user-select: text;
+  cursor: text;
+}
+
 input,
 textarea,
 select {
