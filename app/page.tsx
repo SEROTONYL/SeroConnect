@@ -38,19 +38,19 @@ const benefits = [
 const plans = [
   {
     name: "Mini",
-    price: "90 ₽",
+    price: "99 ₽",
     description: "Для одного личного устройства.",
     points: ["1 устройство", "30 дней"],
   },
   {
-    name: "Standard",
-    price: "249 ₽",
+    name: "Standart",
+    price: "189 ₽",
     description: "Подходит для повседневного использования на нескольких устройствах.",
     points: ["до 3 устройств", "30 дней"],
   },
   {
     name: "Family",
-    price: "399 ₽",
+    price: "299 ₽",
     description: "Удобный вариант для личного набора устройств или семьи.",
     points: ["до 5 устройств", "30 дней"],
   },

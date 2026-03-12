@@ -12,15 +12,15 @@ export const metadata: Metadata = {
 const plans = [
   {
     name: "Mini",
-    price: "90 ₽",
+    price: "99 ₽",
     duration: "30 дней",
     devices: "1 устройство",
     description:
       "Базовый вариант для одного личного устройства с доступом к сервису на фиксированный срок.",
   },
   {
-    name: "Standard",
-    price: "249 ₽",
+    name: "Standart",
+    price: "189 ₽",
     duration: "30 дней",
     devices: "до 3 устройств",
     description:
@@ -29,7 +29,7 @@ const plans = [
   },
   {
     name: "Family",
-    price: "399 ₽",
+    price: "299 ₽",
     duration: "30 дней",
     devices: "до 5 устройств",
     description:
