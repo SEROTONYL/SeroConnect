@@ -11,6 +11,11 @@ export const primaryNav = [
   { href: "/contacts", label: "Контакты" },
 ];
 
+export const headerCta = {
+  href: "/pricing",
+  label: "\u0412\u044b\u0431\u0440\u0430\u0442\u044c \u0442\u0430\u0440\u0438\u0444",
+};
+
 export const legalNav = [
   { href: "/privacy", label: "Политика обработки данных" },
   { href: "/offer", label: "Публичная оферта" },

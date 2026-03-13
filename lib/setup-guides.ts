@@ -5,6 +5,10 @@ export type SetupGuideStep = {
   number: number;
   title: string;
   text: string;
+  link?: {
+    label: string;
+    href: string;
+  };
   imagePath: string;
   imageAlt: string;
 };
@@ -27,6 +31,10 @@ type SetupGuideSeed = Omit<SetupPlatformGuide, "href" | "steps"> & {
   steps: Array<{
     title: string;
     text: string;
+    link?: {
+      label: string;
+      href: string;
+    };
   }>;
 };
 
@@ -131,23 +139,28 @@ const setupGuideSeeds: SetupGuideSeed[] = [
       },
       {
         title: "Установите приложение",
-        text: "Скачайте и установите рекомендованное приложение для Windows или macOS.",
+        text: "Установите v2rayN с GitHub.",
+        link: {
+          label: "Скачать v2rayN",
+          href: "https://github.com/2dust/v2rayN/releases/tag/7.18.0",
+        },
       },
       {
-        title: "Откройте приложение",
-        text: "Запустите приложение на компьютере.",
+        title: "Разархивируйте приложение",
+        text: "Скачайте архив, разархивируйте приложение в пустую папку и запустите его.",
       },
       {
         title: "Добавьте конфигурацию",
         text: "Создайте новое подключение или импортируйте конфигурацию через ссылку.",
       },
       {
-        title: "Сохраните настройки",
-        text: "Проверьте, что конфигурация добавлена корректно и отображается в списке подключений.",
-      },
-      {
-        title: "Подключитесь",
-        text: "Активируйте подключение и дождитесь успешного соединения.",
+        title: "Измените тип охвата VPN",
+        text: "Измените тип охвата VPN в настройках клиента.",
+        link: {
+          label: "Гайд по routing / VPN mode",
+          // TODO: Replace with the final external v2rayN routing/VPN mode guide URL.
+          href: "https://example.com/todo-v2rayn-routing-guide",
+        },
       },
     ],
   },
@@ -161,8 +174,9 @@ export const setupGuides: SetupPlatformGuide[] = setupGuideSeeds.map((guide) => 
     number: index + 1,
     title: step.title,
     text: step.text,
+    link: step.link,
     imagePath: `/guides/${guide.slug}/step-${index + 1}.png`,
-    imageAlt: `${guide.title}: шаг ${index + 1} — ${step.title}`,
+    imageAlt: `${guide.title}: шаг ${index + 1} - ${step.title}`,
   })),
 }));
 

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { SetupGuideImage } from "@/components/setup-guide-image";
 import type { SetupGuideStep } from "@/lib/setup-guides";
 
@@ -14,6 +15,17 @@ export function SetupStepCard({ step }: SetupStepCardProps) {
       </div>
 
       <p>{step.text}</p>
+
+      {step.link ? (
+        <Link
+          className="text-link"
+          href={step.link.href}
+          target="_blank"
+          rel="noreferrer"
+        >
+          {step.link.label}
+        </Link>
+      ) : null}
 
       <SetupGuideImage src={step.imagePath} alt={step.imageAlt} />
     </article>
